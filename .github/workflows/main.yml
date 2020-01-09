@@ -21,6 +21,14 @@ jobs:
         SHIFTER_APP_URL: ${{ steps.start.outputs.shifter_app_url }}
       run:
         sed "s@REPLACE_SHIFTER_URL@$SHIFTER_APP_URL@" gatsby-config.js -i
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    - name: install
+      run: npm install
+    - name: build
+      run: npm run build
     - name: Stop WordPress
       uses: getshifter/actions-stop@v2
       env:
