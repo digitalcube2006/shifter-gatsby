@@ -45,3 +45,4 @@ managed in WordPress, but is pulled into the Gatsby site and rendered there:
 - :white_check_mark: Categories
 - :white_check_mark: Tags
 
+
