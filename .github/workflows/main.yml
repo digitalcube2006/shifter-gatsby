@@ -29,6 +29,13 @@ jobs:
       run: npm install
     - name: build
       run: npm run build
+    - name: Check changes in stories
+      uses: netlify/actions/diff-includes@master
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      with:
+        args: public
     - name: Stop WordPress
       uses: getshifter/actions-stop@v2
       env:
