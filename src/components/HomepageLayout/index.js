@@ -16,7 +16,7 @@ const HomepageLayout = ({ pageNumber, location, children }) => (
         style={{ padding: `75px 75px 50px 75px` }}
       >
         <Col xs={24} md={14} style={{ textAlign: `center` }}>
-          <h1>Gatsby + WPGraphQL Demo</h1>
+          <h1>Shifter + Gatsby + WPGraphQL Demo</h1>
           <Row
             type="flex"
             justify="center"
