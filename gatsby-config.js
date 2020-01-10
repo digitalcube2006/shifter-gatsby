@@ -62,7 +62,7 @@ module.exports = {
         // This is field under which it's accessible
         fieldName: `wpgraphql`,
         // Url to query from
-        url: `REPLACE_SHIFTER_URL/graphql/`,
+        url: process.env.SHIFTER_APP_URL + `/graphql/`,
       },
     },
     `gatsby-plugin-react-helmet`,
