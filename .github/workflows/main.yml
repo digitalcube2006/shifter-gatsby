@@ -16,11 +16,6 @@ jobs:
         SHIFTER_USER: ${{ secrets.SHIFTER_USER }}
         SHIFTER_PASS: ${{ secrets.SHIFTER_PASS }}
         SHIFTER_SITE_ID: ${{ secrets.SHIFTER_SITE_ID }}
-    - name: Replace ShifterURL
-      env:
-        SHIFTER_APP_URL: ${{ steps.start.outputs.shifter_app_url }}
-      run:
-        sed "s@REPLACE_SHIFTER_URL@$SHIFTER_APP_URL@" gatsby-config.js -i
     - name: setup node
       uses: actions/setup-node@v1
       with:
@@ -28,6 +23,8 @@ jobs:
     - name: install
       run: npm install
     - name: build
+      env:
+        SHIFTER_APP_URL: ${{ steps.start.outputs.shifter_app_url }}
       run: npm run build
     - name: Deploy to netlify
       uses: netlify/actions/cli@master
