@@ -51,7 +51,7 @@ const HomepageLayout = ({ pageNumber, location, children }) => (
           </Row>
           <div>
             <p style={{ fontSize: `1.5rem` }}>
-              This is an example of a Gatsby + GitHub+ WPGraphQL site.
+              This is an example of a Gatsby + GitHub + WPGraphQL site.
             </p>
             <p style={{ fontSize: `1.2rem` }}>
               The content is generated using{` `}
