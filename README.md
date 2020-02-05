@@ -7,7 +7,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby + WPGraphQL Blog Example
+ Shifter + Gatsby + WPGraphQL Blog Example
 </h1>
 
 This is an example Gatsby site using WPGraphQL as the source. 
